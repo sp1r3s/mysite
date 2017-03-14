@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'i5=1z$52s46ml_*d@ih(2-4z$miqz43osi@e8+5)$jg5mg-9x!'
+SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -123,6 +123,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-PUSHER_APP_ID = u"311977"
-PUSHER_KEY =u"7d21169e336fb7244895"
-PUSHER_SECRET =u"7357f1380b714288bb23"
+PUSHER_APP_ID = os.environ["PUSHER_APP_ID"]
+PUSHER_KEY =os.environ["PUSHER_KEY"]
+PUSHER_SECRET =os.environ["PUSHER_SECRET"]
