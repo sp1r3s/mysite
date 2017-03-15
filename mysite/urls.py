@@ -19,6 +19,7 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^polls/', include('polls.urls')),
     url(r'^about/', include('about.urls')),
+    url(r'^morsemessenger/',include('morsemessenger.urls')),
     url(r'^$', include('index.urls')),
     url(r'^admin/', admin.site.urls),
 ]
